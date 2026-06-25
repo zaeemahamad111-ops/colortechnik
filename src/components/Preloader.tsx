@@ -35,7 +35,7 @@ export default function Preloader() {
         <img
           src="/preloader-logo.png"
           alt="Colortechnik Loading Logo"
-          className="w-48 md:w-64 h-auto animate-pulse drop-shadow-2xl"
+          className="w-80 md:w-[450px] h-auto animate-pulse drop-shadow-2xl"
         />
       </div>
     </div>

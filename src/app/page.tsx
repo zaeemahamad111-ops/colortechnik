@@ -60,7 +60,7 @@ export default function Page() {
 {/*  Hero Section  */}
 <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
 <div className="absolute inset-0 z-0">
-<img className="w-full h-full object-cover parallax-bg" alt="Hero Background" src="/hero-bg.jpg" fetchpriority="high" decoding="async" />
+<img className="w-full h-full object-cover parallax-bg" alt="Hero Background" src="/hero-bg.jpg" fetchPriority="high" decoding="async" />
 </div>
 <div className="relative z-10 text-center px-grid-margin max-w-7xl">
 <h1 
