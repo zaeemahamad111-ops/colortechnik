@@ -9,7 +9,7 @@ export default function Footer() {
             <img src="/logo.png" alt="Colortechnik Logo" className="h-24 w-auto mb-8 cursor-pointer object-contain" />
           </Link>
           <p className="font-body-md opacity-70 mb-8 max-w-xs">
-            Designing tomorrow's landmarks with technical precision and editorial
+            Designing tomorrow&apos;s landmarks with technical precision and editorial
             elegance. Based in Berlin, working worldwide.
           </p>
           <div className="flex gap-4 mt-8">

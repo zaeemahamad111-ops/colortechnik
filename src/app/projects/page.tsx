@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+
 
 export default function Page() {
   useEffect(() => {
@@ -123,10 +123,10 @@ export default function Page() {
 </div>
 <div className="max-w-[1440px] mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 items-center gap-16">
 <div>
-<h2 className="font-display-lg text-display-lg-mobile md:text-headline-xl text-surface-container-lowest leading-tight">LET'S BUILD <br/>SOMETHING <br/><span className="italic font-light">EXTRAORDINARY.</span></h2>
+<h2 className="font-display-lg text-display-lg-mobile md:text-headline-xl text-surface-container-lowest leading-tight">LET&apos;S BUILD <br/>SOMETHING <br/><span className="italic font-light">EXTRAORDINARY.</span></h2>
 </div>
 <div className="flex flex-col gap-8">
-<p className="font-body-lg text-body-lg text-on-primary-container">Our team of architectural luminary experts is ready to transform your vision into a structural reality that speaks volumes. Let's discuss your next landmark project.</p>
+<p className="font-body-lg text-body-lg text-on-primary-container">Our team of architectural luminary experts is ready to transform your vision into a structural reality that speaks volumes. Let&apos;s discuss your next landmark project.</p>
 <div className="flex flex-col sm:flex-row gap-4">
 <button className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-subheading-lg text-subheading-lg hover:bg-secondary-fixed transition-colors">Start Project</button>
 <button className="border border-outline-variant text-on-primary px-10 py-5 rounded-full font-subheading-lg text-subheading-lg hover:bg-primary-container transition-colors">Get in Touch</button>

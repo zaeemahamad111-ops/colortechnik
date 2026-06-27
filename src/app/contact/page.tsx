@@ -47,7 +47,7 @@ export default function Page() {
 <div className="max-w-4xl">
 <span className="font-label-md text-label-md text-surface-container-lowest tracking-[0.3em] uppercase mb-6 block opacity-80">Architecture &amp; Light</span>
 <h1 className="font-display-lg text-display-lg text-surface-container-lowest leading-none mb-12">
-                    LET'S BUILD <br/>SOMETHING <br/>EXTRAORDINARY.
+                    LET&apos;S BUILD <br/>SOMETHING <br/>EXTRAORDINARY.
                 </h1>
 <div className="flex items-center gap-6">
 <div className="w-24 h-[1px] bg-surface-container-lowest/50"></div>

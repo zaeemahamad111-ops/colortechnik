@@ -85,7 +85,7 @@ export default function Page() {
 <div className="md:col-start-7 md:col-span-5 order-1 md:order-2 mb-12 md:mb-0">
 <span className="font-stat-number text-stat-number text-stone-beige block mb-6">2012</span>
 <h3 className="font-subheading-lg text-subheading-lg text-primary mb-6 underline decoration-stone-beige decoration-2 underline-offset-8">The Foundation</h3>
-<p className="font-body-md text-body-md text-on-surface-variant">What began as a small consultancy for boutique gallery spaces evolved into a multidisciplinary firm. We realized early on that lighting wasn't just a utility—it was a psychological driver of experience.</p>
+<p className="font-body-md text-body-md text-on-surface-variant">What began as a small consultancy for boutique gallery spaces evolved into a multidisciplinary firm. We realized early on that lighting wasn&apos;t just a utility—it was a psychological driver of experience.</p>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center">

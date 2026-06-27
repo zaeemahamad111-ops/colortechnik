@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+
 
 export default function Page() {
   useEffect(() => {
@@ -129,7 +129,7 @@ export default function Page() {
 <div className="md:col-span-4 md:col-start-9 reveal">
 <span className="font-label-md text-label-md text-[#ffdcbe] uppercase tracking-widest mb-4 block">03 / Hospitality</span>
 <h3 className="font-headline-xl text-headline-xl mb-6">The Art of Arrival.</h3>
-<p className="font-body-lg text-body-lg text-white/80 mb-8">Creating memorable brand experiences through theatrical yet balanced lighting for the world's finest hotels.</p>
+<p className="font-body-lg text-body-lg text-white/80 mb-8">Creating memorable brand experiences through theatrical yet balanced lighting for the world&apos;s finest hotels.</p>
 <button className="border-b-2 border-white pb-1 font-label-md text-label-md uppercase hover:text-secondary hover:border-secondary transition-colors">Hospitality Portfolio</button>
 </div>
 </div>
@@ -215,7 +215,7 @@ export default function Page() {
 <div className="grid md:grid-cols-2 gap-section-gap">
 <div className="reveal">
 <span className="material-symbols-outlined text-[#ffdcbe] text-6xl mb-8">format_quote</span>
-<h3 className="font-headline-xl text-headline-xl mb-12 italic font-normal">"Colortechnik doesn't just supply fixtures; they provide an architectural language that completes our vision. Their technical rigor is unmatched."</h3>
+<h3 className="font-headline-xl text-headline-xl mb-12 italic font-normal">&quot;Colortechnik doesn&apos;t just supply fixtures; they provide an architectural language that completes our vision. Their technical rigor is unmatched.&quot;</h3>
 <div className="flex items-center gap-4">
 <div className="w-12 h-px bg-[#ffdcbe]"></div>
 <div>
@@ -226,7 +226,7 @@ export default function Page() {
 </div>
 <div className="reveal" style={{"transitionDelay": "200ms", }}>
 <span className="material-symbols-outlined text-[#ffdcbe] text-6xl mb-8">format_quote</span>
-<h3 className="font-headline-xl text-headline-xl mb-12 italic font-normal">"The precision of their lighting layouts has redefined how our clients experience their space. Every lumen is intentional."</h3>
+<h3 className="font-headline-xl text-headline-xl mb-12 italic font-normal">&quot;The precision of their lighting layouts has redefined how our clients experience their space. Every lumen is intentional.&quot;</h3>
 <div className="flex items-center gap-4">
 <div className="w-12 h-px bg-[#ffdcbe]"></div>
 <div>
@@ -241,7 +241,7 @@ export default function Page() {
 {/*  Final CTA  */}
 <section className="bg-[#011425] text-surface py-section-gap text-center relative overflow-hidden">
 <div className="max-w-4xl mx-auto px-grid-margin relative z-10 reveal">
-<h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET'S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>
+<h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET&apos;S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>
 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
 <button className="bg-secondary-fixed text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-secondary transition-all w-full md:w-auto">Start a Conversation</button>
 <button className="border-2 border-white/20 text-white px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-white/10 transition-all w-full md:w-auto">View Our Process</button>

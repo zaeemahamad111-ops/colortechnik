@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
+
 
 export default function Page() {
   useEffect(() => {
@@ -166,7 +166,7 @@ export default function Page() {
 <div className="md:col-span-4 bg-primary p-12 rounded-lg text-on-primary">
 <h3 className="font-headline-md text-headline-md mb-4">Bespoke Design</h3>
 <p className="font-body-md text-body-md opacity-80 mb-8">
-                        When standard fixtures aren't enough, we engineer and build custom luminaires that match your unique vision.
+                        When standard fixtures aren&apos;t enough, we engineer and build custom luminaires that match your unique vision.
                     </p>
 <ul className="space-y-4 font-label-md text-label-md">
 <li className="flex items-center gap-3">
