@@ -90,8 +90,9 @@ export default function Page() {
 </div>
 </section>
 {/*  Hospitality Lighting (Floating Full Width Style)  */}
-<section className="editorial-reveal bg-surface-container py-section-gap">
-<div className="max-w-[1440px] mx-auto px-grid-margin">
+<section className="editorial-reveal bg-[#DCCFC1] py-section-gap relative overflow-hidden">
+<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
 <div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter mb-element-gap">
 <div className="md:col-span-6">
 <span className="font-label-md text-label-md text-secondary uppercase tracking-widest">03</span>
@@ -186,15 +187,15 @@ export default function Page() {
 </div>
 </section>
 {/*  Final CTA Section  */}
-<section className="relative bg-primary py-section-gap overflow-hidden">
-
+<section className="relative bg-[#DCCFC1] text-primary py-section-gap overflow-hidden">
+<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
 <div className="relative z-10 max-w-[1440px] mx-auto px-grid-margin text-center">
-<h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-12">Discuss Your Project</h2>
+<h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">Discuss Your Project</h2>
 <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-<button className="px-12 py-5 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-md font-bold hover:bg-secondary-container transition-all transform hover:scale-105">
+<button className="px-12 py-5 bg-primary text-white rounded-full font-label-md text-label-md font-bold hover:bg-primary/90 transition-all transform hover:scale-105 shadow-md">
                         SCHEDULE A CONSULTATION
                     </button>
-<button className="font-label-md text-label-md text-on-primary border-b-2 border-on-primary pb-1 hover:opacity-70 transition-opacity">
+<button className="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity">
                         DOWNLOAD BROCHURE
                     </button>
 </div>

@@ -62,8 +62,9 @@ export default function Page() {
 </div>
 </header>
 {/*  Contact Section  */}
-<section className="bg-[#F4F1EC] py-section-gap">
-<div className="max-w-[1440px] mx-auto px-grid-margin">
+<section className="bg-[#DCCFC1] py-section-gap relative overflow-hidden">
+<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter items-start">
 {/*  Left: Contact Details  */}
 <div className="lg:col-span-5 space-y-16">
@@ -116,17 +117,17 @@ export default function Page() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-primary tracking-widest uppercase">Full Name</label>
-<input className="w-full bg-[#F4F1EC] border-none border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all py-4 font-body-md" placeholder="Johnathan Doe" type="text"/>
+<input className="w-full bg-transparent border-none border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-4 font-body-md" placeholder="Johnathan Doe" type="text"/>
 </div>
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-primary tracking-widest uppercase">Email Address</label>
-<input className="w-full bg-[#F4F1EC] border-none border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all py-4 font-body-md" placeholder="john@studio.com" type="email"/>
+<input className="w-full bg-transparent border-none border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-4 font-body-md" placeholder="john@studio.com" type="email"/>
 </div>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-primary tracking-widest uppercase">Project Type</label>
-<select className="w-full bg-[#F4F1EC] border-none border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all py-4 font-body-md">
+<select className="w-full bg-transparent border-none border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-4 font-body-md">
 <option>Residential Masterpiece</option>
 <option>Commercial Structural</option>
 <option>Hospitality Lighting</option>
@@ -135,12 +136,12 @@ export default function Page() {
 </div>
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-primary tracking-widest uppercase">Location</label>
-<input className="w-full bg-[#F4F1EC] border-none border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all py-4 font-body-md" placeholder="City, Country" type="text"/>
+<input className="w-full bg-transparent border-none border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-4 font-body-md" placeholder="City, Country" type="text"/>
 </div>
 </div>
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-primary tracking-widest uppercase">Your Vision</label>
-<textarea className="w-full bg-[#F4F1EC] border-none border-b-2 border-outline-variant focus:border-secondary focus:ring-0 transition-all py-4 font-body-md" placeholder="Describe the scale and intent of your project..." rows={4}></textarea>
+<textarea className="w-full bg-transparent border-none border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-4 font-body-md" placeholder="Describe the scale and intent of your project..." rows={4}></textarea>
 </div>
 <div className="pt-4">
 <button className="w-full bg-primary text-on-primary py-6 rounded-full font-label-md text-label-md tracking-[0.2em] uppercase hover:bg-secondary transition-all duration-500 shadow-lg flex items-center justify-center gap-4 group" type="submit">
@@ -164,21 +165,22 @@ export default function Page() {
 </div>
 </section>
 {/*  CTA Section  */}
-<section className="py-section-gap px-grid-margin bg-primary text-on-primary overflow-hidden relative">
+<section className="py-section-gap px-grid-margin bg-[#DCCFC1] text-primary overflow-hidden relative">
+<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
 
 </div>
 <div className="max-w-[1440px] mx-auto relative z-10 flex flex-col md:flex-row justify-between items-center gap-12">
 <div className="max-w-2xl">
 <h2 className="font-headline-xl text-headline-xl mb-6">Experience <br/>The Brilliance.</h2>
-<p className="font-body-lg text-body-lg text-on-primary-container">Book a site visit or a private consultation at our experience center to witness architectural luminescence first-hand.</p>
+<p className="font-body-lg text-body-lg text-primary/80">Book a site visit or a private consultation at our experience center to witness architectural luminescence first-hand.</p>
 </div>
 <div className="flex flex-col sm:flex-row gap-6 w-full md:w-auto">
-<button className="bg-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-full font-label-md text-label-md tracking-widest uppercase hover:brightness-110 transition-all flex items-center justify-center gap-3">
+<button className="bg-primary text-white px-10 py-5 rounded-full font-label-md text-label-md tracking-widest uppercase hover:brightness-110 shadow-md transition-all flex items-center justify-center gap-3">
                     Schedule Site Visit
                     <span className="material-symbols-outlined">event</span>
 </button>
-<button className="border border-outline-variant text-on-primary px-10 py-5 rounded-full font-label-md text-label-md tracking-widest uppercase hover:bg-surface-container-lowest hover:text-primary transition-all flex items-center justify-center gap-3">
+<button className="border-2 border-primary text-primary px-10 py-5 rounded-full font-label-md text-label-md tracking-widest uppercase hover:bg-primary/5 transition-all flex items-center justify-center gap-3">
                     Expert Consultation
                     <span className="material-symbols-outlined">chat</span>
 </button>
