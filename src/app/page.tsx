@@ -155,7 +155,7 @@ export default function Page() {
 </div>
 </section>
 {/*  About Preview  */}
-<section className="bg-primary-container text-on-primary py-section-gap relative overflow-hidden">
+<section className="bg-[#F4F1EC] text-primary py-section-gap relative overflow-hidden">
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
 
 </div>
@@ -163,11 +163,11 @@ export default function Page() {
 <div className="grid md:grid-cols-12 gap-grid-gutter">
 <div className="md:col-span-8 reveal">
 <h2 className="font-headline-xl text-headline-xl mb-12 leading-tight">ENGINEERING LIGHT.<br/>CRAFTING ATMOSPHERE.</h2>
-<p className="font-headline-md text-headline-md mb-12 text-on-primary-container">We believe lighting is the fourth dimension of architecture. Without it, form is invisible. With it, space becomes transformative.</p>
+<p className="font-headline-md text-headline-md mb-12 text-primary/80">We believe lighting is the fourth dimension of architecture. Without it, form is invisible. With it, space becomes transformative.</p>
 </div>
 <div className="md:col-span-4 md:col-start-9 reveal flex flex-col justify-end">
-<p className="font-body-lg text-body-lg mb-8 opacity-80">Our team of lighting designers, engineers, and architectural specialists work at the intersection of technical precision and artistic vision.</p>
-<button className="bg-surface text-primary px-10 py-4 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-secondary-fixed transition-all w-fit">About Colortechnik</button>
+<p className="font-body-lg text-body-lg mb-8 text-primary/70">Our team of lighting designers, engineers, and architectural specialists work at the intersection of technical precision and artistic vision.</p>
+<button className="bg-primary text-white px-10 py-4 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary/90 transition-all w-fit shadow-md">About Colortechnik</button>
 </div>
 </div>
 </div>
