@@ -155,7 +155,7 @@ export default function Page() {
 </div>
 </section>
 {/*  About Preview  */}
-<section className="bg-[#F4F1EC] text-primary py-section-gap relative overflow-hidden">
+<section className="bg-[#DCCFC1] text-primary py-section-gap relative overflow-hidden">
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
 
 </div>
