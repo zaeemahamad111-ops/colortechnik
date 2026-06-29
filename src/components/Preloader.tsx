@@ -57,10 +57,10 @@ export default function Preloader() {
           alt="Colortechnik Loading Logo"
           className="w-80 md:w-[450px] h-auto drop-shadow-2xl"
           style={{
-            // Hide the bottom 40% (the text) initially, reveal it in the 'full' phase
+            // Hide the bottom 20% (the text) initially, reveal it in the 'full' phase
             clipPath:
               phase === "hidden" || phase === "logo"
-                ? "inset(0 0 40% 0)"
+                ? "inset(0 0 20% 0)"
                 : "inset(0 0 0 0)",
             transition: "clip-path 1s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
