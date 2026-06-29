@@ -46,12 +46,14 @@ export default function Page() {
 
   return (
     <main>
-      {/* Global Fixed Background with Scribbles */}
-      <div className="fixed inset-0 -z-10 pointer-events-none bg-[#0a1128]">
-        {/* The scribble artwork */}
-        <div className="absolute inset-0 opacity-30 mix-blend-screen" style={{ backgroundImage: 'url("/scribbles-bg.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}></div>
-        {/* Overlay to ensure text readability across sections */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/80 via-[#0a1128]/50 to-[#0a1128]/90"></div>
+      {/* Global Fixed Background */}
+      <div className="fixed inset-0 -z-10 pointer-events-none bg-[#111827]">
+        {/* Soft pastel navy gradients */}
+        <div className="absolute inset-0 opacity-50" style={{ backgroundImage: 'radial-gradient(circle at 15% 30%, rgba(99, 130, 168, 0.3), transparent 35%), radial-gradient(circle at 85% 70%, rgba(153, 180, 207, 0.2), transparent 35%)' }}></div>
+        {/* Architectural subtle grid */}
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#111827]/80"></div>
       </div>
       
 {/*  TopNavBar  */}
@@ -154,9 +156,10 @@ export default function Page() {
 </section>
 {/*  About Preview  */}
 <section className="bg-[#DCCFC1] text-primary py-section-gap relative overflow-hidden">
-<div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-
-</div>
+{/* Architectural subtle grid (Beige variation) */}
+<div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#003242 1px, transparent 1px), linear-gradient(90deg, #003242 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+{/* Subtle gradient for depth */}
+<div className="absolute inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 85% 70%, rgba(255, 255, 255, 0.4), transparent 40%)' }}></div>
 <div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
 <div className="grid md:grid-cols-12 gap-grid-gutter">
 <div className="md:col-span-8 reveal">
@@ -239,6 +242,10 @@ export default function Page() {
 </section>
 {/*  Final CTA  */}
 <section className="bg-[#DCCFC1] text-primary py-section-gap text-center relative overflow-hidden">
+{/* Architectural subtle grid (Beige variation) */}
+<div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#003242 1px, transparent 1px), linear-gradient(90deg, #003242 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
+{/* Subtle gradient for depth */}
+<div className="absolute inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 15% 30%, rgba(255, 255, 255, 0.4), transparent 40%)' }}></div>
 <div className="max-w-4xl mx-auto px-grid-margin relative z-10 reveal">
 <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET&apos;S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>
 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
