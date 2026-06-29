@@ -244,12 +244,12 @@ export default function Page() {
 <div className="max-w-4xl mx-auto px-grid-margin relative z-10 reveal">
 <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET&apos;S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>
 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-<button className="bg-secondary-fixed text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-secondary transition-all w-full md:w-auto shadow-md">Start a Conversation</button>
-<button className="border-2 border-primary/20 text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/10 transition-all w-full md:w-auto">View Our Process</button>
+<button className="bg-primary text-white px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/90 shadow-md transition-all w-full md:w-auto">Start a Conversation</button>
+<button className="border-2 border-primary text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/5 transition-all w-full md:w-auto">View Our Process</button>
 </div>
 </div>
 {/*  Abstract light graphic  */}
-<div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-1/2 bg-gradient-to-t from-white/60 to-transparent blur-[120px] pointer-events-none"></div>
+<div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-1/2 bg-gradient-to-t from-white/40 to-transparent blur-[120px] pointer-events-none"></div>
 </section>
 {/*  Footer  */}
 
