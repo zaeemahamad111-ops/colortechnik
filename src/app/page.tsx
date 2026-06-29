@@ -240,7 +240,7 @@ export default function Page() {
 </div>
 </section>
 {/*  Final CTA  */}
-<section className="bg-[#011425] text-surface py-section-gap text-center relative overflow-hidden">
+<section className="bg-primary text-surface py-section-gap text-center relative overflow-hidden">
 <div className="max-w-4xl mx-auto px-grid-margin relative z-10 reveal">
 <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET&apos;S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>
 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
