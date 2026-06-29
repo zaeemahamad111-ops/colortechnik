@@ -73,8 +73,9 @@ export default function Page() {
 </div>
 </section>
 {/*  Clientele Section  */}
-<section className="bg-[#F4F1EC] py-section-gap overflow-hidden">
-<div className="max-w-[1440px] mx-auto px-grid-margin">
+<section className="bg-[#DCCFC1] py-section-gap overflow-hidden relative">
+<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
 <h2 className="font-subheading-lg text-subheading-lg text-primary text-center mb-16 uppercase tracking-widest reveal">Trusted By Leading Architects</h2>
 <div className="relative w-full overflow-hidden">
 <div className="animate-marquee items-center gap-24 py-10 grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-700">
@@ -241,17 +242,17 @@ export default function Page() {
 </div>
 </section>
 {/*  Final CTA  */}
-<section className="bg-primary text-surface py-section-gap text-center relative overflow-hidden">
-<div className="absolute inset-0 opacity-40 mix-blend-screen pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<section className="bg-[#DCCFC1] text-primary py-section-gap text-center relative overflow-hidden">
+<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
 <div className="max-w-4xl mx-auto px-grid-margin relative z-10 reveal">
 <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET&apos;S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>
 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-<button className="bg-secondary-fixed text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-secondary transition-all w-full md:w-auto shadow-md">Start a Conversation</button>
-<button className="border-2 border-white/20 text-white px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-white/10 transition-all w-full md:w-auto">View Our Process</button>
+<button className="bg-primary text-white px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/90 shadow-md transition-all w-full md:w-auto">Start a Conversation</button>
+<button className="border-2 border-primary text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/5 transition-all w-full md:w-auto">View Our Process</button>
 </div>
 </div>
 {/*  Abstract light graphic  */}
-<div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-1/2 bg-gradient-to-t from-primary/30 to-transparent blur-[120px] pointer-events-none"></div>
+<div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-1/2 bg-gradient-to-t from-white/40 to-transparent blur-[120px] pointer-events-none"></div>
 </section>
 {/*  Footer  */}
 
