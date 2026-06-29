@@ -34,6 +34,7 @@ export default function Page() {
 
   return (
     <main>
+      <div className="fixed inset-0 -z-10 opacity-[0.07] mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       
 {/*  TopNavBar  */}
 
@@ -66,9 +67,7 @@ export default function Page() {
 </div>
 </section>
 {/*  Project Grid (Asymmetric Editorial Layout)  */}
-<section className="py-section-gap bg-primary relative overflow-hidden">
-<div className="absolute inset-0 opacity-40 mix-blend-screen pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-<div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
+<section className="py-section-gap px-grid-margin max-w-[1440px] mx-auto">
 <div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
 {/*  Large Feature 1  */}
 <div className="md:col-span-8 group relative overflow-hidden project-card reveal-up h-[600px] rounded-lg">
@@ -117,23 +116,21 @@ export default function Page() {
 </div>
 </div>
 </div>
-</div>
 </section>
 {/*  CTA Section  */}
-<section className="bg-[#DCCFC1] text-primary py-section-gap px-grid-margin relative overflow-hidden">
-<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<section className="bg-primary py-section-gap px-grid-margin relative overflow-hidden">
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
 
 </div>
 <div className="max-w-[1440px] mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 items-center gap-16">
 <div>
-<h2 className="font-display-lg text-display-lg-mobile md:text-headline-xl leading-tight">LET&apos;S BUILD <br/>SOMETHING <br/><span className="italic font-light">EXTRAORDINARY.</span></h2>
+<h2 className="font-display-lg text-display-lg-mobile md:text-headline-xl text-surface-container-lowest leading-tight">LET&apos;S BUILD <br/>SOMETHING <br/><span className="italic font-light">EXTRAORDINARY.</span></h2>
 </div>
 <div className="flex flex-col gap-8">
-<p className="font-body-lg text-body-lg text-primary/80">Our team of architectural luminary experts is ready to transform your vision into a structural reality that speaks volumes. Let&apos;s discuss your next landmark project.</p>
+<p className="font-body-lg text-body-lg text-on-primary-container">Our team of architectural luminary experts is ready to transform your vision into a structural reality that speaks volumes. Let&apos;s discuss your next landmark project.</p>
 <div className="flex flex-col sm:flex-row gap-4">
-<button className="bg-primary text-white px-10 py-5 rounded-full font-subheading-lg text-subheading-lg hover:bg-primary/90 transition-all shadow-md">Start Project</button>
-<button className="border-2 border-primary text-primary px-10 py-5 rounded-full font-subheading-lg text-subheading-lg hover:bg-primary/5 transition-all">Get in Touch</button>
+<button className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-subheading-lg text-subheading-lg hover:bg-secondary-fixed transition-colors">Start Project</button>
+<button className="border border-outline-variant text-on-primary px-10 py-5 rounded-full font-subheading-lg text-subheading-lg hover:bg-primary-container transition-colors">Get in Touch</button>
 </div>
 </div>
 </div>
