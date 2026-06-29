@@ -200,7 +200,7 @@ export default function Page() {
 </div>
 </section>
 {/*  Section 5: Industries Served  */}
-<section className="py-section-gap overflow-hidden bg-surface-container-low">
+<section className="py-section-gap overflow-hidden">
 <div className="px-grid-margin max-w-[1440px] mx-auto">
 <div className="mb-24">
 <h2 className="font-headline-xl text-display-lg-mobile md:text-headline-xl text-primary leading-tight">DOMAINS OF<br/>EXCELLENCE.</h2>
