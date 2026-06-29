@@ -156,10 +156,10 @@ export default function Page() {
 </section>
 {/*  About Preview  */}
 <section className="bg-[#DCCFC1] text-primary py-section-gap relative overflow-hidden">
-{/* Architectural subtle grid (Beige variation) */}
-<div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#003242 1px, transparent 1px), linear-gradient(90deg, #003242 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-{/* Subtle gradient for depth */}
-<div className="absolute inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 85% 70%, rgba(255, 255, 255, 0.4), transparent 40%)' }}></div>
+<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+
+</div>
 <div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
 <div className="grid md:grid-cols-12 gap-grid-gutter">
 <div className="md:col-span-8 reveal">
@@ -241,20 +241,17 @@ export default function Page() {
 </div>
 </section>
 {/*  Final CTA  */}
-<section className="bg-[#DCCFC1] text-primary py-section-gap text-center relative overflow-hidden">
-{/* Architectural subtle grid (Beige variation) */}
-<div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#003242 1px, transparent 1px), linear-gradient(90deg, #003242 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-{/* Subtle gradient for depth */}
-<div className="absolute inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 15% 30%, rgba(255, 255, 255, 0.4), transparent 40%)' }}></div>
+<section className="bg-primary text-surface py-section-gap text-center relative overflow-hidden">
+<div className="absolute inset-0 opacity-40 mix-blend-screen pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
 <div className="max-w-4xl mx-auto px-grid-margin relative z-10 reveal">
 <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET&apos;S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>
 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-<button className="bg-primary text-white px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/90 shadow-md transition-all w-full md:w-auto">Start a Conversation</button>
-<button className="border-2 border-primary text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/5 transition-all w-full md:w-auto">View Our Process</button>
+<button className="bg-secondary-fixed text-primary px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-secondary transition-all w-full md:w-auto shadow-md">Start a Conversation</button>
+<button className="border-2 border-white/20 text-white px-12 py-5 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-white/10 transition-all w-full md:w-auto">View Our Process</button>
 </div>
 </div>
 {/*  Abstract light graphic  */}
-<div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-1/2 bg-gradient-to-t from-white/40 to-transparent blur-[120px] pointer-events-none"></div>
+<div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-1/2 bg-gradient-to-t from-primary/30 to-transparent blur-[120px] pointer-events-none"></div>
 </section>
 {/*  Footer  */}
 
