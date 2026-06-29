@@ -66,9 +66,10 @@ export default function Page() {
 </div>
 </section>
 {/*  Project Grid (Asymmetric Editorial Layout)  */}
-<section className="py-section-gap px-grid-margin max-w-[1440px] mx-auto bg-[#DCCFC1] relative overflow-hidden rounded-lg">
-<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-<div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
+<section className="py-section-gap bg-primary relative overflow-hidden">
+<div className="absolute inset-0 opacity-40 mix-blend-screen pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
+<div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
 {/*  Large Feature 1  */}
 <div className="md:col-span-8 group relative overflow-hidden project-card reveal-up h-[600px] rounded-lg">
 <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxury contemporary living room with floor-to-ceiling windows overlooking a serene landscape. The interior features warm architectural beige stone walls, minimalist furniture in charcoal velvet, and a soft glow from recessed linear lighting. The photo has a high-end editorial feel with perfect balance and airy composition, highlighting textures and volume." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCqQX643pERWRUc7gvhIKse-EEfxJsVPUCWAglHZ2jaD13SgnGYNaJb4vlc5HEbaaS3RvtlNlorT-lNfYwITlxD3u5zwvJCJKbr2U9rwLlLa7ToufRPnRZlR2OxuW1AuE-UR-ZrUGgl-tBwoMmL1_q_zd29iQRUXWVSeW3az93CwMxH5FVHJRAdu8iZRRv8lEiu3lPuGWkF1UVxO0hIkvYk8_vFDlmzVeCOMDXXndtt9SuJ_8XQ4Wu8h-MBEZENVEv8yvv2A5nDeY"/>
@@ -113,6 +114,7 @@ export default function Page() {
 <h3 className="font-display-lg text-headline-xl text-white">THE MONOLITH MUSEUM</h3>
 <p className="font-body-lg text-surface-variant mt-4">Abu Dhabi, UAE</p>
 <button className="mt-8 border-b-2 border-secondary-fixed text-white font-label-md text-label-md py-2 px-4 hover:bg-secondary-fixed hover:text-primary transition-all">VIEW CASE STUDY</button>
+</div>
 </div>
 </div>
 </div>
