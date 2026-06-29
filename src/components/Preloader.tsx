@@ -52,16 +52,27 @@ export default function Preloader() {
             : "translate-x-0 opacity-100"
         }`}
       >
+        {/* Top Image: Logo Icon (Static) */}
         <img
           src="/preloader-logo.png"
           alt="Colortechnik Loading Logo"
           className="w-80 md:w-[450px] h-auto drop-shadow-2xl"
           style={{
-            // Hide the bottom 20% (the text) initially, reveal it in the 'full' phase
+            clipPath: "inset(0 0 33% 0)",
+          }}
+        />
+        
+        {/* Bottom Image: Text (Animated and Shifted for visual balance) */}
+        <img
+          src="/preloader-logo.png"
+          alt=""
+          className="absolute top-0 left-0 w-80 md:w-[450px] h-auto drop-shadow-2xl"
+          style={{
+            transform: "translateX(-5%)", // Shift text left to perfectly center it under the heavy "C"
             clipPath:
               phase === "hidden" || phase === "logo"
-                ? "inset(0 0 20% 0)"
-                : "inset(0 0 0 0)",
+                ? "inset(67% 0 33% 0)"
+                : "inset(67% 0 0 0)",
             transition: "clip-path 1s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
