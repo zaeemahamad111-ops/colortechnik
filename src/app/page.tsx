@@ -46,14 +46,12 @@ export default function Page() {
 
   return (
     <main>
-      {/* Global Fixed Background */}
-      <div className="fixed inset-0 -z-10 pointer-events-none bg-[#111827]">
-        {/* Soft pastel navy gradients */}
-        <div className="absolute inset-0 opacity-50" style={{ backgroundImage: 'radial-gradient(circle at 15% 30%, rgba(99, 130, 168, 0.3), transparent 35%), radial-gradient(circle at 85% 70%, rgba(153, 180, 207, 0.2), transparent 35%)' }}></div>
-        {/* Architectural subtle grid */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}></div>
-        {/* Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#111827]/80"></div>
+      {/* Global Fixed Background with Scribbles */}
+      <div className="fixed inset-0 -z-10 pointer-events-none bg-[#0a1128]">
+        {/* The scribble artwork */}
+        <div className="absolute inset-0 opacity-30 mix-blend-screen" style={{ backgroundImage: 'url("/scribbles-bg.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}></div>
+        {/* Overlay to ensure text readability across sections */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1128]/80 via-[#0a1128]/50 to-[#0a1128]/90"></div>
       </div>
       
 {/*  TopNavBar  */}
