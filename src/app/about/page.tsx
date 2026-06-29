@@ -34,6 +34,7 @@ export default function Page() {
 
   return (
     <main>
+      <div className="fixed inset-0 -z-10 opacity-[0.07] mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       
 {/*  Top Navigation Bar  */}
 <header className="fixed top-0 w-full z-50 transition-all duration-500 glass-nav">
@@ -41,7 +42,7 @@ export default function Page() {
 </header>
 <main>
 {/*  Section 1: Hero  */}
-<section className="min-h-screen bg-warm-ivory flex flex-col justify-end pt-32 pb-section-gap overflow-hidden">
+<section className="min-h-screen flex flex-col justify-end pt-32 pb-section-gap overflow-hidden">
 <div className="px-grid-margin max-w-[1440px] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-grid-gutter relative">
 <div className="md:col-span-8 z-10">
 <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight text-primary mb-12">
@@ -63,9 +64,8 @@ export default function Page() {
 </div>
 </section>
 {/*  Section 2: Our Story  */}
-<section className="py-section-gap bg-[#DCCFC1] relative overflow-hidden">
-<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-<div className="px-grid-margin max-w-[1440px] mx-auto relative z-10">
+<section className="py-section-gap bg-surface">
+<div className="px-grid-margin max-w-[1440px] mx-auto">
 <div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter mb-24">
 <div className="md:col-span-4">
 <span className="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">The Narrative</span>
@@ -134,7 +134,7 @@ export default function Page() {
 </div>
 </section>
 {/*  Section 4: Our Process  */}
-<section className="py-section-gap bg-surface">
+<section className="py-section-gap">
 <div className="px-grid-margin max-w-[1440px] mx-auto">
 <div className="text-center mb-24">
 <span className="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">The Methodology</span>
@@ -247,16 +247,15 @@ export default function Page() {
 </div>
 </section>
 {/*  Section 6: CTA  */}
-<section className="py-section-gap bg-[#DCCFC1] text-primary text-center px-mobile-margin relative overflow-hidden">
-<div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-<div className="max-w-4xl mx-auto relative z-10">
+<section className="py-section-gap bg-primary text-on-primary text-center px-mobile-margin">
+<div className="max-w-4xl mx-auto">
 <h2 className="font-headline-xl text-display-lg-mobile md:text-headline-xl mb-12">READY TO DEFINE YOUR RADIANCE?</h2>
-<p className="font-body-lg text-body-lg mb-12 text-primary/80">Join us for a private consultation and experience the transformative power of architectural lighting.</p>
+<p className="font-body-lg text-body-lg mb-12 opacity-80">Join us for a private consultation and experience the transformative power of architectural lighting.</p>
 <div className="flex flex-col md:flex-row gap-6 justify-center">
-<button className="px-12 py-5 rounded-full bg-primary text-white font-label-md text-label-md hover:bg-primary/90 transition-all duration-300 scale-100 active:scale-95 shadow-md">
+<button className="px-12 py-5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md hover:bg-secondary transition-all duration-300 scale-100 active:scale-95">
                         Start Your Lighting Journey
                     </button>
-<button className="px-12 py-5 rounded-full border-2 border-primary text-primary font-label-md text-label-md hover:bg-primary/5 transition-all duration-300">
+<button className="px-12 py-5 rounded-full border border-white/20 text-white font-label-md text-label-md hover:bg-white/10 transition-all duration-300">
                         Download Studio Profile
                     </button>
 </div>
