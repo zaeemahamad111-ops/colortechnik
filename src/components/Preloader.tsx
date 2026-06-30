@@ -7,20 +7,20 @@ export default function Preloader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Phase 1: Logo icon fades in (0s to 2.5s)
+    // Phase 1: Logo icon fades in (0s to 2.4s)
     const timer0 = setTimeout(() => {
       setPhase("logo");
     }, 100);
 
-    // Phase 2: Text and strip fade in (2.5s to 4.5s)
+    // Phase 2: Text and strip fade in (2.4s to 4.4s)
     const timer1 = setTimeout(() => {
       setPhase("full"); 
-    }, 2500);
+    }, 2400);
 
-    // Phase 3: Everything fades out after 2s of being fully visible (total 4.5s)
+    // Phase 3: Everything fades out after staying together for 2s (total 4.4s)
     const timer2 = setTimeout(() => {
       setPhase("fade");
-    }, 4500);
+    }, 4400);
 
     // Phase 4: Remove from DOM at 5s total length
     const timer3 = setTimeout(() => {
@@ -39,32 +39,27 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-500 ease-in-out ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-600 ease-in-out ${
         phase === "fade" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className="relative w-48 md:w-64">
-        {/* Invisible placeholder to establish perfect aspect ratio */}
-        <img src="/logo-white-text.png" alt="" className="w-full h-auto opacity-0" />
-
-        {/* Layer 1: The Icon (Top part) */}
+      <div className="flex flex-col items-center justify-center gap-2">
+        {/* The Icon (First picture) */}
         <img
-          src="/logo-white-text.png"
+          src="/preloader-icon.png"
           alt="Colortechnik Logo Icon"
-          className={`absolute top-0 left-0 w-full h-auto transition-all duration-1000 ease-in-out ${
+          className={`w-32 md:w-48 h-auto transition-all duration-1000 ease-in-out ${
             phase !== "hidden" ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
-          style={{ clipPath: "inset(0 0 15% 0)" }}
         />
         
-        {/* Layer 2: The Text & Strip (Bottom part) */}
+        {/* The Text & Strip (Second picture) */}
         <img
-          src="/logo-white-text.png"
+          src="/preloader-text.png"
           alt="Colortechnik Logo Text"
-          className={`absolute top-0 left-0 w-full h-auto transition-opacity duration-1000 ease-in-out ${
+          className={`w-48 md:w-64 h-auto transition-opacity duration-1000 ease-in-out ${
             phase === "full" || phase === "fade" ? "opacity-100" : "opacity-0"
           }`}
-          style={{ clipPath: "inset(85% 0 0 0)" }}
         />
       </div>
     </div>
