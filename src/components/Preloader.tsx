@@ -3,29 +3,35 @@
 import { useEffect, useState } from "react";
 
 export default function Preloader() {
-  const [phase, setPhase] = useState<"hidden" | "visible" | "fade">("hidden");
+  const [phase, setPhase] = useState<"hidden" | "logo-in" | "name-in" | "fade-out">("hidden");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Phase 0 -> 1: Logo fades and scales in
+    // 0s: Logo fades in from left to right
     const timer0 = setTimeout(() => {
-      setPhase("visible");
-    }, 100);
+      setPhase("logo-in");
+    }, 50);
 
-    // Phase 1 -> 2: Start fade-out after 2.5s
+    // 2.4s: Name fades in
     const timer1 = setTimeout(() => {
-      setPhase("fade");
-    }, 2600);
+      setPhase("name-in");
+    }, 2400);
 
-    // Phase 2 -> done: Remove from DOM after fade
+    // 4.4s: Total fade out begins
     const timer2 = setTimeout(() => {
+      setPhase("fade-out");
+    }, 4400);
+
+    // 5.0s: Remove from DOM
+    const timer3 = setTimeout(() => {
       setLoading(false);
-    }, 3200);
+    }, 5000);
 
     return () => {
       clearTimeout(timer0);
       clearTimeout(timer1);
       clearTimeout(timer2);
+      clearTimeout(timer3);
     };
   }, []);
 
@@ -33,24 +39,38 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-600 ease-in-out ${
-        phase === "fade" ? "opacity-0 pointer-events-none" : "opacity-100"
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-500 ease-in-out ${
+        phase === "fade-out" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div
-        className={`transition-all duration-700 ease-out ${
-          phase === "hidden"
-            ? "scale-90 opacity-0"
-            : phase === "fade"
-            ? "scale-105 opacity-0"
-            : "scale-100 opacity-100"
-        }`}
-      >
+      <div className="flex flex-col items-center relative w-48 md:w-64">
+        {/* Logo Icon (fades in from left) */}
         <img
-          src="/logo-white-text.png"
-          alt="Colortechnik Logo"
-          className="w-48 md:w-64 h-auto"
+          src="/logo-icon.png"
+          alt="Colortechnik Icon"
+          className={`w-full h-auto object-contain transition-all duration-1000 ease-out transform ${
+            phase === "hidden"
+              ? "-translate-x-12 opacity-0"
+              : phase === "fade-out"
+              ? "scale-105 opacity-0"
+              : "translate-x-0 opacity-100"
+          }`}
         />
+        
+        {/* Logo Text (fades in later) */}
+        <div className="w-full relative mt-4">
+          <img
+            src="/logo-text.png"
+            alt="Colortechnik Text"
+            className={`w-full h-auto object-contain transition-all duration-1000 ease-in-out ${
+              phase === "hidden" || phase === "logo-in"
+                ? "opacity-0 translate-y-2"
+                : phase === "fade-out"
+                ? "opacity-0 scale-105"
+                : "opacity-100 translate-y-0"
+            }`}
+          />
+        </div>
       </div>
     </div>
   );
