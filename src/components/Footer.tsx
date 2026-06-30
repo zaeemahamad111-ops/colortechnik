@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter px-grid-margin py-section-gap max-w-[1440px] mx-auto">
         <div className="md:col-span-4 mb-12 md:mb-0">
           <Link href="/">
-            <img src="/logo.png" alt="Colortechnik Logo" className="h-24 w-auto mb-8 cursor-pointer object-contain" />
+            <img src="/logo-white-text.png" alt="Colortechnik Logo" className="h-16 md:h-20 w-auto mb-8 cursor-pointer object-contain" />
           </Link>
           <p className="font-body-md opacity-70 mb-8 max-w-xs">
             Designing tomorrow&apos;s landmarks with technical precision and editorial
