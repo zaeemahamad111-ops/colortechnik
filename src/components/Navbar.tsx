@@ -50,20 +50,11 @@ export default function Navbar() {
     >
       <div className="flex justify-between items-center px-grid-margin max-w-[1440px] mx-auto">
         <Link href="/" className="flex items-center z-50">
-          {scrolled ? (
-            <img
-              src="/logo.png"
-              alt="Colortechnik Logo"
-              className="w-32 md:w-44 h-auto object-contain transition-all duration-300"
-            />
-          ) : (
-            <img
-              src="/preloader-logo.png"
-              alt="Colortechnik Logo"
-              className="w-32 md:w-44 h-auto object-contain transition-all duration-300"
-              style={{ mixBlendMode: "screen" }}
-            />
-          )}
+          <img
+            src="/logo-transparent.png"
+            alt="Colortechnik Logo"
+            className="w-32 md:w-44 h-auto object-contain transition-all duration-300"
+          />
         </Link>
         
         {/* Desktop Menu */}
