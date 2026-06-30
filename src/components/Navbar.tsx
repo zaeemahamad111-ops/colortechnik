@@ -53,7 +53,7 @@ export default function Navbar() {
           <img
             src="/logo-transparent.png"
             alt="Colortechnik Logo"
-            className="w-28 md:w-36 h-auto object-contain transition-all duration-300"
+            className="w-24 md:w-32 h-auto object-contain transition-all duration-300"
           />
         </Link>
         
