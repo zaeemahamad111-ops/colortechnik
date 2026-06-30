@@ -130,7 +130,7 @@ export default function Page() {
 
 {/*  Landscape Addition  */}
 {(filter === "All" || filter === "Landscape") && (
-<div className="md:col-span-12 group relative overflow-hidden project-card reveal-up h-[400px] rounded-lg">
+<div className="md:col-span-12 group relative overflow-hidden project-card reveal-up h-[700px] rounded-lg">
 <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Landscape Lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyTntLCEBkdERAI7PL_rcVm1xtL2k-Mnoo-wfzDUZ6ja-pDz4EkEmqaDB90Xqw2jRZgWYKmtovG6iyma5bcHHJjquRuRAhkfAiurm4khoV-1lTfSbQeQbEoMvM2yQnfLpEEPTMStNBG7OOiOZW8YtDJoaqCYktzoeO9if53H_QcQg-AX0KuKE4pCUTuKdP0wg_5fCWiP0HmTSq3IwoOKEdW_y1cq2hzfJEW65JdP6WKxsoqQFZsYsP4rUb-eCl3KIZIAtVa-sxxT8"/>
 <div className="project-overlay absolute inset-0 bg-primary/40 opacity-0 transition-opacity duration-500 flex flex-col justify-end p-12">
 <span className="font-label-md text-label-md text-secondary-fixed mb-2">Landscape</span>
