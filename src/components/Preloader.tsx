@@ -43,12 +43,12 @@ export default function Preloader() {
         phase === "fade" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className="flex flex-col items-center justify-center gap-2">
+      <div className="flex flex-col items-center justify-center gap-4 md:gap-6">
         {/* The Icon (First picture) */}
         <img
           src="/preloader-icon.png"
           alt="Colortechnik Logo Icon"
-          className={`w-32 md:w-48 h-auto transition-all duration-1000 ease-in-out ${
+          className={`w-48 md:w-72 h-auto transition-all duration-1000 ease-in-out ${
             phase !== "hidden" ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         />
@@ -57,7 +57,7 @@ export default function Preloader() {
         <img
           src="/preloader-text.png"
           alt="Colortechnik Logo Text"
-          className={`w-48 md:w-64 h-auto transition-opacity duration-1000 ease-in-out ${
+          className={`w-64 md:w-96 h-auto transition-opacity duration-1000 ease-in-out ${
             phase === "full" || phase === "fade" ? "opacity-100" : "opacity-0"
           }`}
         />
