@@ -48,7 +48,7 @@ export default function Preloader() {
         <img
           src="/preloader-icon.png"
           alt="Colortechnik Logo Icon"
-          className={`w-64 md:w-80 h-auto transition-all duration-1000 ease-in-out ${
+          className={`w-80 md:w-[32rem] h-auto transition-all duration-1000 ease-in-out ${
             phase !== "hidden" ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         />
@@ -57,7 +57,7 @@ export default function Preloader() {
         <img
           src="/preloader-text.png"
           alt="Colortechnik Logo Text"
-          className={`w-64 md:w-80 h-auto transition-opacity duration-1000 ease-in-out ${
+          className={`w-80 md:w-[32rem] h-auto transition-opacity duration-1000 ease-in-out ${
             phase === "full" || phase === "fade" ? "opacity-100" : "opacity-0"
           }`}
         />
