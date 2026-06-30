@@ -47,7 +47,7 @@ export default function Preloader() {
         }`}
       >
         <img
-          src="/preloader-logo.png"
+          src="/logo-white-text.png"
           alt="Colortechnik Logo"
           className="w-96 md:w-[640px] h-auto"
         />
