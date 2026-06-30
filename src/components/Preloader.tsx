@@ -54,7 +54,7 @@ export default function Preloader() {
           className={`absolute top-0 left-0 w-full h-auto transition-all duration-1000 ease-in-out ${
             phase !== "hidden" ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
-          style={{ clipPath: "inset(0 0 30% 0)" }}
+          style={{ clipPath: "inset(0 0 15% 0)" }}
         />
         
         {/* Layer 2: The Text & Strip (Bottom part) */}
@@ -64,7 +64,7 @@ export default function Preloader() {
           className={`absolute top-0 left-0 w-full h-auto transition-opacity duration-1000 ease-in-out ${
             phase === "full" || phase === "fade" ? "opacity-100" : "opacity-0"
           }`}
-          style={{ clipPath: "inset(70% 0 0 0)" }}
+          style={{ clipPath: "inset(85% 0 0 0)" }}
         />
       </div>
     </div>
