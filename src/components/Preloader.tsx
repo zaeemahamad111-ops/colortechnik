@@ -49,7 +49,7 @@ export default function Preloader() {
         <img
           src="/preloader-logo.png"
           alt="Colortechnik Logo"
-          className="w-56 md:w-72 h-auto"
+          className="w-80 md:w-[520px] h-auto"
         />
       </div>
     </div>
