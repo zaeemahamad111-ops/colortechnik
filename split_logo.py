@@ -1,35 +1,43 @@
 from PIL import Image
 import numpy as np
 
-def split_logo(input_path):
-    img = Image.open(input_path).convert("RGBA")
+def split_logo():
+    img = Image.open("public/logo-white-text.png")
     data = np.array(img)
     
-    # Calculate row density of non-transparent pixels
+    # The image is already transparent with white text.
+    # Find the gap separating the icon from the text
     alpha = data[:,:,3]
+    height, width = data.shape[:2]
+    
+    # Calculate row density of non-transparent pixels
     row_density = np.sum(alpha > 10, axis=1)
     
-    height = data.shape[0]
-    
-    # Find the gap from the bottom
     gap_y = int(height * 0.75)
     in_content = False
     for y in range(height-1, 0, -1):
-        if row_density[y] > 5:
+        if row_density[y] > 10:
             in_content = True
         elif in_content and row_density[y] == 0:
             gap_y = y
             break
             
-    print(f"Splitting logo at y={gap_y} out of {height}")
+    print(f"Gap found at {gap_y} out of {height}")
     
-    # Split the image
-    img_icon = img.crop((0, 0, img.width, gap_y))
-    img_text = img.crop((0, gap_y, img.width, img.height))
+    # Crop the icon (top part)
+    icon = img.crop((0, 0, width, gap_y))
+    # Crop transparent padding for icon
+    bbox = icon.getbbox()
+    if bbox:
+        icon = icon.crop(bbox)
+    icon.save("public/preloader-icon.png")
     
-    # Save the split images
-    img_icon.save("public/logo-icon.png")
-    img_text.save("public/logo-text.png")
-    print("Successfully split into logo-icon.png and logo-text.png")
+    # Crop the text (bottom part)
+    text = img.crop((0, gap_y, width, height))
+    bbox = text.getbbox()
+    if bbox:
+        text = text.crop(bbox)
+    text.save("public/preloader-text.png")
+    print("Successfully split into preloader-icon.png and preloader-text.png")
 
-split_logo("public/logo-white-text.png")
+split_logo()

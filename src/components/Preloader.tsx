@@ -3,29 +3,29 @@
 import { useEffect, useState } from "react";
 
 export default function Preloader() {
-  const [phase, setPhase] = useState<"hidden" | "logo-in" | "name-in" | "fade-out">("hidden");
+  const [phase, setPhase] = useState<"hidden" | "icon_in" | "text_in" | "fade_out">("hidden");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 0s: Logo fades in from left to right
+    // 1. Icon fades in from left immediately
     const timer0 = setTimeout(() => {
-      setPhase("logo-in");
-    }, 50);
+      setPhase("icon_in");
+    }, 100);
 
-    // 2.4s: Name fades in
+    // 2. Text fades in after 2.4 seconds
     const timer1 = setTimeout(() => {
-      setPhase("name-in");
-    }, 2400);
+      setPhase("text_in");
+    }, 2500);
 
-    // 4.4s: Total fade out begins
+    // 3. Everything fades out after another 2 seconds (total 4.5s)
     const timer2 = setTimeout(() => {
-      setPhase("fade-out");
-    }, 4400);
+      setPhase("fade_out");
+    }, 4500);
 
-    // 5.0s: Remove from DOM
+    // 4. Remove preloader from DOM at 5 seconds
     const timer3 = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 5100);
 
     return () => {
       clearTimeout(timer0);
@@ -39,38 +39,36 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-500 ease-in-out ${
-        phase === "fade-out" ? "opacity-0 pointer-events-none" : "opacity-100"
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-600 ease-in-out ${
+        phase === "fade_out" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className="flex flex-col items-center relative w-48 md:w-64">
-        {/* Logo Icon (fades in from left) */}
+      <div 
+        className={`flex flex-col items-center gap-6 transition-transform duration-700 ease-out ${
+          phase === "fade_out" ? "scale-105" : "scale-100"
+        }`}
+      >
+        {/* The CT Icon - Slides in from left */}
         <img
-          src="/logo-icon.png"
+          src="/preloader-icon.png"
           alt="Colortechnik Icon"
-          className={`w-full h-auto object-contain transition-all duration-1000 ease-out transform ${
+          className={`w-32 md:w-48 h-auto transition-all duration-1000 ease-out transform ${
             phase === "hidden"
               ? "-translate-x-12 opacity-0"
-              : phase === "fade-out"
-              ? "scale-105 opacity-0"
               : "translate-x-0 opacity-100"
           }`}
         />
-        
-        {/* Logo Text (fades in later) */}
-        <div className="w-full relative mt-4">
-          <img
-            src="/logo-text.png"
-            alt="Colortechnik Text"
-            className={`w-full h-auto object-contain transition-all duration-1000 ease-in-out ${
-              phase === "hidden" || phase === "logo-in"
-                ? "opacity-0 translate-y-2"
-                : phase === "fade-out"
-                ? "opacity-0 scale-105"
-                : "opacity-100 translate-y-0"
-            }`}
-          />
-        </div>
+
+        {/* The Text - Fades in later */}
+        <img
+          src="/preloader-text.png"
+          alt="Colortechnik Text"
+          className={`w-48 md:w-64 h-auto transition-opacity duration-1000 ease-in ${
+            phase === "text_in" || phase === "fade_out"
+              ? "opacity-100"
+              : "opacity-0"
+          }`}
+        />
       </div>
     </div>
   );
