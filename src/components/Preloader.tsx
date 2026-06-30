@@ -3,23 +3,29 @@
 import { useEffect, useState } from "react";
 
 export default function Preloader() {
+  const [phase, setPhase] = useState<"hidden" | "visible" | "fade">("hidden");
   const [loading, setLoading] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Start fade out quickly to improve perceived performance
-    const timer = setTimeout(() => {
-      setFadeOut(true);
-    }, 300);
+    // Phase 0 -> 1: Logo fades and scales in
+    const timer0 = setTimeout(() => {
+      setPhase("visible");
+    }, 100);
 
-    // Remove from DOM after fade out completes
-    const removeTimer = setTimeout(() => {
+    // Phase 1 -> 2: Start fade-out after 2.5s
+    const timer1 = setTimeout(() => {
+      setPhase("fade");
+    }, 2600);
+
+    // Phase 2 -> done: Remove from DOM after fade
+    const timer2 = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 3200);
 
     return () => {
-      clearTimeout(timer);
-      clearTimeout(removeTimer);
+      clearTimeout(timer0);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
     };
   }, []);
 
@@ -27,15 +33,23 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-black transition-opacity duration-700 ease-in-out ${
-        fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black transition-opacity duration-600 ease-in-out ${
+        phase === "fade" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className={`transition-all duration-1000 transform ${fadeOut ? "scale-110 opacity-0" : "scale-100 opacity-100"}`}>
+      <div
+        className={`transition-all duration-700 ease-out ${
+          phase === "hidden"
+            ? "scale-90 opacity-0"
+            : phase === "fade"
+            ? "scale-105 opacity-0"
+            : "scale-100 opacity-100"
+        }`}
+      >
         <img
           src="/preloader-logo.png"
-          alt="Colortechnik Loading Logo"
-          className="w-80 md:w-[450px] h-auto animate-pulse drop-shadow-2xl"
+          alt="Colortechnik Logo"
+          className="w-56 md:w-72 h-auto"
         />
       </div>
     </div>
