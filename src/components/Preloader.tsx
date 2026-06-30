@@ -43,23 +43,28 @@ export default function Preloader() {
         phase === "fade" ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className="flex flex-col items-center justify-center gap-0">
-        {/* The Icon (First picture) */}
+      <div className="relative w-56 md:w-80">
+        {/* Invisible placeholder to establish perfect aspect ratio */}
+        <img src="/logo-white-text.png" alt="" className="w-full h-auto opacity-0" />
+
+        {/* Layer 1: The Icon (Top part) */}
         <img
-          src="/preloader-icon.png"
+          src="/logo-white-text.png"
           alt="Colortechnik Logo Icon"
-          className={`w-80 md:w-[32rem] h-auto transition-all duration-1000 ease-in-out ${
+          className={`absolute top-0 left-0 w-full h-auto transition-all duration-1000 ease-in-out ${
             phase !== "hidden" ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
+          style={{ clipPath: "inset(0 0 21.2% 0)" }}
         />
         
-        {/* The Text & Strip (Second picture) */}
+        {/* Layer 2: The Text & Strip (Bottom part) */}
         <img
-          src="/preloader-text.png"
+          src="/logo-white-text.png"
           alt="Colortechnik Logo Text"
-          className={`w-80 md:w-[32rem] h-auto transition-opacity duration-1000 ease-in-out ${
+          className={`absolute top-0 left-0 w-full h-auto transition-opacity duration-1000 ease-in-out ${
             phase === "full" || phase === "fade" ? "opacity-100" : "opacity-0"
           }`}
+          style={{ clipPath: "inset(78.8% 0 0 0)" }}
         />
       </div>
     </div>
