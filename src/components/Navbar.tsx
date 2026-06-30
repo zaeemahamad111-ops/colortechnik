@@ -53,7 +53,7 @@ export default function Navbar() {
           <img 
             src={scrolled ? "/logo.png" : "/preloader-logo.png"} 
             alt="Colortechnik Logo" 
-            className="w-24 md:w-32 h-auto object-contain transition-opacity duration-300" 
+            className="w-32 md:w-44 h-auto object-contain transition-opacity duration-300" 
           />
         </Link>
         
