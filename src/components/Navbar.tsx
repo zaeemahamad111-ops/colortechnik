@@ -33,6 +33,9 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
+  const isLightHero = pathname === "/about" || pathname === "/services";
+  const useDarkElements = scrolled || isLightHero;
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -45,12 +48,12 @@ export default function Navbar() {
     <nav
       id="top-nav"
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-white/90 backdrop-blur-md py-2 shadow-sm text-on-surface" : "bg-transparent py-6 text-white"
-      }`}
+        scrolled ? "bg-white/90 backdrop-blur-md py-2 shadow-sm" : "bg-transparent py-6"
+      } ${useDarkElements ? "text-on-surface" : "text-white"}`}
     >
       <div className="flex justify-between items-center px-grid-margin max-w-[1440px] mx-auto">
         <Link href="/" className="flex items-center z-50">
-          {scrolled ? (
+          {useDarkElements ? (
             <img
               src="/logo-transparent.png"
               alt="Colortechnik Logo"
@@ -73,8 +76,8 @@ export default function Navbar() {
               href={link.href}
               className={`font-label-md text-label-md pb-1 transition-colors duration-300 ${
                 pathname === link.href
-                  ? (scrolled ? "text-primary border-b-2 border-primary" : "text-white border-b-2 border-white")
-                  : (scrolled ? "text-on-surface-variant hover:text-primary" : "text-white/80 hover:text-white")
+                  ? (useDarkElements ? "text-primary border-b-2 border-primary" : "text-white border-b-2 border-white")
+                  : (useDarkElements ? "text-on-surface-variant hover:text-primary" : "text-white/80 hover:text-white")
               }`}
             >
               {link.name}
@@ -83,7 +86,7 @@ export default function Navbar() {
         </div>
         <button 
           className={`hidden md:block px-8 py-3 rounded-full font-label-md text-label-md transition-all duration-300 transform scale-95 hover:scale-100 active:scale-95 uppercase ${
-            scrolled ? "bg-primary text-on-primary hover:bg-secondary" : "bg-white text-primary hover:bg-white/90"
+            useDarkElements ? "bg-primary text-on-primary hover:bg-secondary" : "bg-white text-primary hover:bg-white/90"
           }`}
         >
           Consultation
