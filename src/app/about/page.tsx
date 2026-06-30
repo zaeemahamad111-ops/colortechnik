@@ -200,8 +200,11 @@ export default function Page() {
 </div>
 </section>
 {/*  Section 5: Industries Served  */}
-<section className="py-section-gap overflow-hidden bg-surface-container-low">
-<div className="px-grid-margin max-w-[1440px] mx-auto">
+<section className="py-section-gap overflow-hidden bg-surface-container-low relative">
+<div className="absolute inset-0 w-full h-full opacity-10 pointer-events-none z-0">
+  <img src="/scribbles-bg.png" alt="" className="w-full h-full object-cover object-top" />
+</div>
+<div className="px-grid-margin max-w-[1440px] mx-auto relative z-10">
 <div className="mb-24">
 <h2 className="font-headline-xl text-display-lg-mobile md:text-headline-xl text-primary leading-tight">DOMAINS OF<br/>EXCELLENCE.</h2>
 </div>
