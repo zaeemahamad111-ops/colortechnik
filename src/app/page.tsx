@@ -73,7 +73,7 @@ export default function Page() {
 </div>
 </section>
 {/*  Clientele Section  */}
-<section className="bg-surface py-section-gap overflow-hidden relative">
+<section className="bg-[#DCCFC1] py-section-gap overflow-hidden relative">
 <div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
 <div className="max-w-[1440px] mx-auto px-grid-margin relative z-10">
 <h2 className="font-subheading-lg text-subheading-lg text-primary text-center mb-16 uppercase tracking-widest reveal">Trusted By Leading Architects</h2>
@@ -156,7 +156,7 @@ export default function Page() {
 </div>
 </section>
 {/*  About Preview  */}
-<section className="bg-surface text-primary py-section-gap relative overflow-hidden">
+<section className="bg-[#DCCFC1] text-primary py-section-gap relative overflow-hidden">
 <div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
 
@@ -242,7 +242,7 @@ export default function Page() {
 </div>
 </section>
 {/*  Final CTA  */}
-<section className="bg-surface text-primary py-section-gap text-center relative overflow-hidden">
+<section className="bg-[#DCCFC1] text-primary py-section-gap text-center relative overflow-hidden">
 <div className="absolute inset-0 opacity-20 mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
 <div className="max-w-4xl mx-auto px-grid-margin relative z-10 reveal">
 <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">LET&apos;S CREATE EXTRAORDINARY SPACES THROUGH LIGHT.</h2>

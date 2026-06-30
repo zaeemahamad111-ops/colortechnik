@@ -34,7 +34,6 @@ export default function Page() {
 
   return (
     <main>
-      <div className="fixed inset-0 -z-10 opacity-[0.07] mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       
 {/*  TopNavBar  */}
 
@@ -67,7 +66,7 @@ export default function Page() {
 </div>
 </section>
 {/*  Project Grid (Asymmetric Editorial Layout)  */}
-<section className="py-section-gap px-grid-margin max-w-[1440px] mx-auto">
+<section className="py-section-gap px-grid-margin max-w-[1440px] mx-auto bg-surface">
 <div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
 {/*  Large Feature 1  */}
 <div className="md:col-span-8 group relative overflow-hidden project-card reveal-up h-[600px] rounded-lg">

@@ -106,7 +106,9 @@ export default function Page() {
 </section>
 {/*  Section 3: Our Philosophy  */}
 <section className="py-section-gap bg-primary text-on-primary relative overflow-hidden">
-<div className="absolute inset-0 opacity-20 mix-blend-screen pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+<div className="absolute inset-0 opacity-10">
+
+</div>
 <div className="px-grid-margin max-w-[1440px] mx-auto relative z-10">
 <div className="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
 <div className="md:col-span-10">

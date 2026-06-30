@@ -34,7 +34,6 @@ export default function Page() {
 
   return (
     <main>
-      <div className="fixed inset-0 -z-10 opacity-[0.07] mix-blend-multiply filter invert pointer-events-none" style={{ backgroundImage: "url('/scribbles-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       
 {/*  TopNavBar  */}
 
@@ -63,7 +62,7 @@ export default function Page() {
 </div>
 </header>
 {/*  Contact Section  */}
-<section className="py-section-gap">
+<section className="bg-[#F4F1EC] py-section-gap">
 <div className="max-w-[1440px] mx-auto px-grid-margin">
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-grid-gutter items-start">
 {/*  Left: Contact Details  */}
